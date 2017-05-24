@@ -45,7 +45,7 @@ void ICACHE_FLASH_ATTR blinkLed(LedNumEnum led, int delay)
 {
 	os_timer_disarm(&timer);
 	os_timer_setfn(&timer, (os_timer_func_t *)ledBlink_cb, &leds[led]);
-	os_timer_arm(&timer, 30, 1);
+	os_timer_arm(&timer, 300, 1);
 }
 
 void ICACHE_FLASH_ATTR initLeds()

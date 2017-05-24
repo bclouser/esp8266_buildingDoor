@@ -35,9 +35,9 @@ static void ICACHE_FLASH_ATTR mqttConnectedCb(uint32_t *args)
 {
     MQTT_Client* client = (MQTT_Client*)args;
     os_printf("MQTT: Connected\r\n");
-    MQTT_Subscribe(client, "/windowShadeControl_SOMEHASH", 0);
+    MQTT_Subscribe(client, "/buildingDoorControl_SOMEHASH", 0);
 
-    MQTT_Publish(client, "/device/heartbeat", "Window Shade Controller Says Hello", 6, 2, 0);
+    MQTT_Publish(client, "/device/heartbeat", "Building Door Controller Says Hello", 6, 2, 0);
     setLed(e_ledNum1, false);
 }
 
